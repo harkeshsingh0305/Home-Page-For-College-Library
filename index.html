@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Book Store - ABC College of Engineering</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+        }
+
+        /* Top Frame / Header */
+        .top-frame {
+            height: 130px;
+            background-color: #1e3a5f;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            color: #1e3a5f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .college {
+            flex: 1;
+        }
+
+        .college h1 {
+            margin: 0 0 10px;
+            font-size: 25px;
+        }
+
+        .college p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .top-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .top-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Main Area Layout */
+        .main {
+            display: flex;
+            min-height: calc(100vh - 130px);
+        }
+
+        /* Left Sidebar Frame */
+        .left-frame {
+            width: 240px;
+            background-color: #e8eef5;
+            border-right: 2px solid #1e3a5f;
+            padding: 20px;
+        }
+
+        .left-frame h2 {
+            color: #1e3a5f;
+            text-align: center;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: #1e3a5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background-color: #356a9f;
+        }
+
+        /* Right Content Frame */
+        .right-frame {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h2.section-title {
+            color: #1e3a5f;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* Tables and Forms styling */
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e3a5f;
+            color: white;
+        }
+
+        form label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"],
+        form select {
+            padding: 8px;
+            width: 300px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+
+        form input[type="submit"] {
+            padding: 10px 25px;
+            background-color: #1e3a5f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #356a9f;
+        }
+
+        form input[type="reset"] {
+            padding: 10px 25px;
+            background-color: #ccc;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= TOP FRAME ================= -->
+    <header class="top-frame">
+        <div class="logo"><img src="logo.png" alt=""></div>
+        <div class="college">
+            <h1>Ajay kumar Garg Engineering College, Ghaziabad</h1>
+            <p>Pushthake Khareede Online</p>
+        </div>
+        <nav class="top-links">
+            <a href="#home">Home</a>
+            <a href="#login">Login</a>
+            <a href="#registration">Registration</a>
+            <a href="#catalogue">Catalogue</a>
+            <a href="#cart">Cart</a>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN AREA ================= -->
+    <div class="main">
+
+        <!-- ================= LEFT FRAME ================= -->
+        <aside class="left-frame">
+            <h2>Categories</h2>
+            <div class="menu">
+                <a href="#cse">CSE</a>
+                <a href="#ece">ECE</a>
+                <a href="#eee">EEE</a>
+                <a href="#civil">CIVIL</a>
+            </div>
+        </aside>
+
+        <!-- ================= RIGHT FRAME (Content Sections) ================= -->
+        <main class="right-frame">
+
+            <!-- HOME SECTION -->
+            <section id="home">
+                <h1 style="color:#1e3a5f; margin-top:0;">Welcome to Online Pushthakalay</h1>
+                <hr>
+                <h2 class="section-title">Description of the Website</h2>
+                <p>Welcome to our Online Book Store. This website provides textbooks and reference books for various engineering departments.</p>
+                <p>Students can browse books according to their department, view the catalogue, register as users, login to their account, and manage their shopping cart.</p>
+                
+                <h2 class="section-title">Available Categories</h2>
+                <ul>
+                    <li>Computer Science and Engineering (CSE)</li>
+                    <li>Electronics and Communication Engineering (ECE)</li>
+                    <li>Electrical and Electronics Engineering (EEE)</li>
+                    <li>Civil Engineering (CIVIL)</li>
+                </ul>
+            </section>
+
+            <!-- LOGIN SECTION -->
+            <section id="login" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">Login</h1>
+                <form>
+                    <label>Username:</label>
+                    <input type="text" placeholder="Enter Username">
+
+                    <label>Password:</label>
+                    <input type="password" placeholder="Enter Password">
+
+                    <input type="submit" value="Login">
+                    <input type="reset" value="Reset">
+                </form>
+            </section>
+
+            <!-- REGISTRATION SECTION -->
+            <section id="registration" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">Student Registration</h1>
+                <form>
+                    <label>Name:</label>
+                    <input type="text" placeholder="Enter Full Name">
+
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter Email">
+
+                    <label>Username:</label>
+                    <input type="text" placeholder="Choose Username">
+
+                    <label>Password:</label>
+                    <input type="password" placeholder="Choose Password">
+
+                    <label>Department:</label>
+                    <select>
+                        <option>CSE</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>CIVIL</option>
+                    </select>
+
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </form>
+            </section>
+
+            <!-- CATALOGUE SECTION -->
+            <section id="catalogue" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">Book Catalogue</h1>
+                <p>Select a department from the left menu to view its books.</p>
+                <ul>
+                    <li>Computer Science and Engineering - CSE</li>
+                    <li>Electronics and Communication Engineering - ECE</li>
+                    <li>Electrical and Electronics Engineering - EEE</li>
+                    <li>Civil Engineering - CIVIL</li>
+                </ul>
+            </section>
+
+            <!-- CSE SECTION -->
+            <section id="cse" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">CSE Books Catalogue</h1>
+                <table>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Programming in C</td>
+                        <td>E. Balagurusamy</td>
+                        <td>₹400</td>
+                    </tr>
+                    <tr>
+                        <td>Data Structures</td>
+                        <td>Reema Thareja</td>
+                        <td>₹550</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Andrew S. Tanenbaum</td>
+                        <td>₹650</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems</td>
+                        <td>Galvin</td>
+                        <td>₹700</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- ECE SECTION -->
+            <section id="ece" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">ECE Books Catalogue</h1>
+                <table>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Electronic Devices</td>
+                        <td>Thomas L. Floyd</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Electronics</td>
+                        <td>Morris Mano</td>
+                        <td>₹600</td>
+                    </tr>
+                    <tr>
+                        <td>Communication Systems</td>
+                        <td>Simon Haykin</td>
+                        <td>₹700</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- EEE SECTION -->
+            <section id="eee" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">EEE Books Catalogue</h1>
+                <table>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Electrical Machines</td>
+                        <td>P.S. Bimbhra</td>
+                        <td>₹550</td>
+                    </tr>
+                    <tr>
+                        <td>Power Systems</td>
+                        <td>C.L. Wadhwa</td>
+                        <td>₹650</td>
+                    </tr>
+                    <tr>
+                        <td>Control Systems</td>
+                        <td>Nagrath & Gopal</td>
+                        <td>₹600</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- CIVIL SECTION -->
+            <section id="civil" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">CIVIL Books Catalogue</h1>
+                <table>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Engineering Mechanics</td>
+                        <td>R.S. Khurmi</td>
+                        <td>₹450</td>
+                    </tr>
+                    <tr>
+                        <td>Strength of Materials</td>
+                        <td>R.K. Rajput</td>
+                        <td>₹600</td>
+                    </tr>
+                    <tr>
+                        <td>Structural Analysis</td>
+                        <td>S. Ramamrutham</td>
+                        <td>₹700</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- CART SECTION -->
+            <section id="cart" style="margin-top: 50px;">
+                <h1 style="color:#1e3a5f;">Shopping Cart</h1>
+                <table>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>No books added</td>
+                        <td>₹0</td>
+                        <td>0</td>
+                        <td>₹0</td>
+                    </tr>
+                </table>
+                <h3>Total Amount: ₹0</h3>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
